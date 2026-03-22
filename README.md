@@ -54,7 +54,7 @@ DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=
-DB_NAME=skyserve_autopage
+DB_NAME=
 ```
 *Note: Without a valid database configuration, the dynamic VPS location pages and your local sitemap generation will return empty.*
 
