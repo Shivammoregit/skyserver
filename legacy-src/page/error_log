@@ -1,0 +1,6 @@
+[05-Jan-2026 18:05:26 UTC] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/skyserve/public_html/page/city.php on line 99
+[05-Jan-2026 18:05:26 UTC] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/skyserve/public_html/page/city.php on line 99
+[05-Jan-2026 18:05:26 UTC] PHP Warning:  include(): Failed opening 'header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/skyserve/public_html/page/city.php on line 99
+[05-Jan-2026 18:05:26 UTC] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/skyserve/public_html/page/city.php on line 180
+[05-Jan-2026 18:05:26 UTC] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/skyserve/public_html/page/city.php on line 180
+[05-Jan-2026 18:05:26 UTC] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/skyserve/public_html/page/city.php on line 180

@@ -1,0 +1,6 @@
+# RewriteEngine On
+# RewriteBase /page/
+
+# VPS Hosting city pages
+# RewriteRule ^vps-hosting/([a-z-]+)/?$ city.php?city=$1 [L,QSA]
+# RewriteRule ^sitemap\.xml$ sitemap.php [L]

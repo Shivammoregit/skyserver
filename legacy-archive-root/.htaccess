@@ -1,0 +1,51 @@
+# ===============================
+# ENABLE REWRITE ENGINE
+# ===============================
+RewriteEngine On
+RewriteBase /
+
+# ===============================
+# FORCE HTTPS
+# Disabled for local WAMP usage
+# ===============================
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# ===============================
+# FORCE WWW
+# Disabled for local WAMP usage
+# ===============================
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# ===============================
+# REDIRECT .php TO CLEAN URL
+# example: page.php -> /page
+# ===============================
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# ===============================
+# LOAD PHP FILE FOR CLEAN URL
+# example: /page -> page.php
+# ===============================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+)$ $1.php [L,QSA]
+
+# ===============================
+# CUSTOM 404 PAGE
+# ===============================
+ErrorDocument 404 /404.php
+
+# ===============================
+# PHP HANDLER (cPanel)
+# ===============================
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+
+# ===============================
+# SECURITY
+# ===============================
+Options -Indexes

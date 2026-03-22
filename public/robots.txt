@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /client/
+Disallow: /Faltu/
+Disallow: /whmcs/
+
+Allow: /
